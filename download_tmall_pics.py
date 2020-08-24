@@ -30,18 +30,20 @@ def save_image(url: str, file_name: str):
 		print(f'文件 {file_name} 保存成功')
 
 def check_url_valid(url):
-	import re
-	pass
+	if 'detail.m.tmall.com' not in url:
+		raise Exception('输入天猫商品URL有误，需包含 detail.m.tmall.com')
+	# regex 验证url的Regex太长，此处简单验证
 
 def main():
 	tmall_url = input('输入天猫URL: ')
 	file_prefix = input('输入图片文件名前缀: ')
 	check_url_valid(tmall_url)
-	images = get_image_urls(tmall_url)
-	# image_length = len(images)
-	for index, image in enumerate(images):
+
+	image_urls = get_image_urls(tmall_url)
+
+	for index, url in enumerate(image_urls):
 		file_name = f'{file_prefix}_{index+1}.jpg'
-		save_image(image, file_name)
+		save_image(url, file_name)
 
 
 if __name__ == '__main__':

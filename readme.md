@@ -6,9 +6,10 @@
 ```shell
 git clone https://github.com/jiagangzhang/tmall_pics.git
 cd tmall_pics
+
 python3 -m venv tmall-pics-venv
-cd tmall_pics; python3 -m venv tmall-pics-venv
 source tmall-pics-venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
@@ -16,4 +17,6 @@ pip install -r requirements.txt
 
 ```shell
 python download_tmall_pics.py
+输入天猫url：
+输入图片文件名前缀：
 ```

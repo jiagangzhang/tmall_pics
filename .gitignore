@@ -2,3 +2,5 @@
 /include
 /lib
 pyvenv.cfg
+*.jpg
+*.jpeg
